@@ -22,19 +22,20 @@ class Solution {
         // }else{
         //     return highest1;
         // }
-        
-        int minPrice = Integer.MAX_VALUE;
-        int maxProfit = 0;
+
+        //Second Try 
+        int min_price = Integer.MAX_VALUE;
+        int max_profit = 0;
 
         for (int price : prices) {
-            if (price < minPrice) {
-                minPrice = price; // Update the minimum price
-            } else if (price - minPrice > maxProfit) {
-                maxProfit = price - minPrice; // Update the maximum profit
+            if (price < min_price) {
+                min_price = price; // Update the minimum price
+            } else if (price - min_price > max_profit) {
+                max_profit = price - min_price; // Update the maximum profit
             }
         }
 
-        return maxProfit;
+        return max_profit;
     }
     
 }
