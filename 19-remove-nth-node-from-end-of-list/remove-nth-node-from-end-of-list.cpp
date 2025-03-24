@@ -21,18 +21,14 @@ public:
             count++;
         }
         
-        int counter = 0;
-        // if(head == nullptr || head->next == nullptr){
-        //     delete (head);
-        //     return  nullptr;
-        // }else 
+        int counter = 1; 
         if(n == count){
             temp = head;
             head = head->next;
             delete (temp);
             return head;
         }else{
-            count = count - n;
+            count = count - n + 1;
             while(counter < count){
                 prev = front;
                 front = front->next;
