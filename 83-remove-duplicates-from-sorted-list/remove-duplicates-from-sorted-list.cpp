@@ -21,11 +21,10 @@ public:
                 temp = temp->next;
             }
             for(auto it = data.begin(); it + 1 < data.end();){
-                
                     if(*it == *(it + 1)){
                         it = data.erase(it);
                     }else{
-                        ++it;
+                        it++;
                     }
                 
             }
