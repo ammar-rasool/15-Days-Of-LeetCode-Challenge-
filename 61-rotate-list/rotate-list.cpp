@@ -11,7 +11,7 @@
 class Solution {
 public:
     ListNode* rotateRight(ListNode* head, int k) {
-        if(head == nullptr){
+        if(head == nullptr || head->next == nullptr){
             return head;
         }
         vector<int> data;
@@ -20,12 +20,7 @@ public:
             data.emplace_back(temp->val);
             temp = temp->next;
         }
-        if(data.size() == 1){
-            head = new ListNode(data[0]);
-            return head;
-        }
         k = k % data.size();
-        
         for (int i = 0; i < k; i++){
             int last = data[data.size() - 1];
             for(int i = data.size() - 1; i >= 0; i--){
