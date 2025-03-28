@@ -25,9 +25,9 @@ public:
             return head;
         }
         k = k % data.size();
-        int last = 0;
+        
         for (int i = 0; i < k; i++){
-            last = data[data.size() - 1];
+            int last = data[data.size() - 1];
             for(int i = data.size() - 1; i >= 0; i--){
                 if (i - 1 >= 0){
                     data[i] = data[i - 1];
